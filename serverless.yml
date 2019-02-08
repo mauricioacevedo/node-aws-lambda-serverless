@@ -1,0 +1,13 @@
+service: aws-lambda-nodejs-test
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  hello:
+    handler: handler.sayhello
+    events:
+      - http:
+          path: /sayhello
+          method: get
